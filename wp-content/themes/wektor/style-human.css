@@ -3149,3 +3149,48 @@ object {
 .gallery-caption {
   display: block;
 }
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+[class^="col-"].no-gutters,
+[class*=" col-"].no-gutters {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.top-header {
+  float: left;
+  width: 100%;
+  background-color: #f2f2f2;
+  height: 140px;
+}
+.top-header .left, .top-header .right {
+  height: 140px;
+}
+.top-header .left {
+  transform-style: preserve-3d;
+}
+.top-header .left h2 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  font-weight: 300;
+  font-size: 2.5rem;
+  color: #0c2c61;
+}
+.top-header .right {
+  background-size: cover;
+}
+.top-header .right img {
+  visibility: hidden;
+}

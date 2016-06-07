@@ -1,0 +1,35 @@
+.top-header	{
+	float: left;
+	width: 100%;
+	background-color: $color__top-header;
+	height: $height__top-header;
+
+
+	.left, .right{
+		height: $height__top-header;
+	}
+
+	.left{
+		transform-style: preserve-3d;
+
+		h2{
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			margin: 0;
+			font-weight: 300;
+			font-size: 2.5rem;
+			color: $color__blue-darker;
+		}
+	}
+
+	.right{
+		background-size: cover;
+
+		img{
+			visibility: hidden;
+		}
+
+	}
+
+}

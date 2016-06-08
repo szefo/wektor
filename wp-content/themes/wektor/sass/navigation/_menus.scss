@@ -1,107 +1,178 @@
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%;
 
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
+  ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
+    ul {
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      //top: 1.5em;
+      left: -999em;
+      z-index: 99999;
+      background: $color__blue;
 
-			ul {
-				left: -999em;
-				top: 0;
-			}
+      ul {
+        left: -999em;
+        top: 0;
+      }
 
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
+      li {
+        &:hover > ul,
+        &.focus > ul {
+          left: 100%;
+        }
+      }
 
-			a {
-				width: 200px;
-			}
+      a {
+        width: 200px;
+        line-height: 1.2;
+        padding: 3px 13px;
 
-			:hover > a,
-			.focus > a {
-			}
+        @include media-breakpoint-down(lg){
+          padding: 3px 7px;
+        }
+      }
 
-			a:hover,
-			a.focus {
-			}
-		}
+      :hover > a,
+      .focus > a {
+      }
 
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-	
-	li {
-		float: left;
-		position: relative;
+      a:hover,
+      a.focus {
+      }
+    }
 
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-	
-	a {
-		display: block;
-		text-decoration: none;
-	}
+    li:hover > ul,
+    li.focus > ul {
+      left: auto;
+    }
+  }
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
+  li {
+    float: left;
+    position: relative;
+
+    &:hover > a,
+    &.focus > a {
+    }
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    transition: all 500ms ease;
+    color: $color__white;
+    position: relative;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 1rem;
+      padding: 15px 7px;
+    }
+
+    &:visited,
+    &:focus,
+    &:active {
+      color: $color__white;
+    }
+
+    &:hover {
+      color: $color__blue-menu-hover;
+    }
+  }
+
+  #primary-menu > li {
+    &:first-child {
+      a {
+        padding-left: 0;
+      }
+    }
+
+    > a {
+      padding: 14px 13px;
+    }
+
+    > a:hover:after {
+      transition: all 500ms ease;
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid $color__white;
+      bottom: -1px;
+      left: calc(50% - 3px);
+    }
+
+
+    &.current_page_item > a,
+    &.current-menu-item > a,
+    &.current_page_ancestor > a,
+    &.current-menu-ancestor > a {
+      &:after {
+        transition: all 500ms ease;
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid $color__white;
+        bottom: -1px;
+        left: calc(50% - 3px);
+      }
+    }
+  }
+
+  .current_page_item > a,
+  .current-menu-item > a,
+  .current_page_ancestor > a,
+  .current-menu-ancestor > a {
+    color: $color__blue-menu-hover;
+  }
 }
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+  display: block;
 }
 
 @media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
+  .menu-toggle {
+    display: none;
+  }
+  .main-navigation ul {
+    display: block;
+  }
 }
 
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
+  .site-main & {
+    margin: 0 0 1.5em;
+    overflow: hidden;
+  }
 
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
-	}
+  .nav-previous {
+    float: left;
+    width: 50%;
+  }
 
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
-
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
+  .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+  }
 }

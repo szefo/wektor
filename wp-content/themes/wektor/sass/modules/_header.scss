@@ -1,0 +1,140 @@
+#masthead {
+  float: left;
+  width: 100%;
+  height: $height__header-top-logo + $height__header__navigation;
+
+  .site-branding {
+    height: $height__header-top-logo;
+    float: left;
+    width: 100%;
+    background: $color__blue-darker;
+
+    a.logo {
+      display: block;
+      height: $height__header-top-logo;
+      transform-style: preserve-3d;
+      float: left;
+
+      img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .contact-data {
+      color: $color__white;
+      height: $height__header-top-logo;
+      transform-style: preserve-3d;
+      text-align: right;
+
+      a, p {
+        display: inline-block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      p {
+        margin: 0 0 0 25px;
+      }
+
+      p:first-child {
+
+        &:after {
+          position: absolute;
+          content: '';
+          width: 2px;
+          height: 2px;
+          border-radius: 50%;
+          background: $color__white;
+          right: -16px;
+          top: calc(50% - 1px);
+        }
+      }
+
+      a {
+        transition: all 500ms ease;
+        margin: 0 0 0 12px;
+        text-decoration: none;
+        color: $color__white;
+
+        &:visited,
+        &:focus,
+        &:active {
+          color: $color__white;
+        }
+
+        &:hover {
+          text-decoration: underline;
+          color: $color__white;
+          opacity: 0.7;
+        }
+
+        img {
+          vertical-align: middle;
+          margin-bottom: 3px;
+        }
+      }
+
+      a:nth-child(2) {
+        padding-left: 13px;
+      }
+    }
+  }
+
+  .site-nav {
+    width: 100%;
+    float: left;
+    height: $height__header__navigation;
+    background: $color__blue;
+
+    .container {
+      position: relative;
+    }
+
+  }
+
+  .phone {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: $color__blue-lighter;
+    color: $color__white;
+    transform-style: preserve-3d;
+    height: $height__header__navigation;
+    padding-left: 18px;
+    z-index: 1;
+
+    p {
+      margin: 0;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      background: $color__blue-lighter;
+    }
+
+    &:before {
+      bottom: -6px;
+      width: 1000%;
+      left: 0;
+      border-radius: 8px;
+      height: 8px;
+    }
+
+    &:after {
+      width: 1000%;
+      right: -1000%;
+      bottom: 0;
+      height: $height__header__navigation;
+    }
+
+  }
+
+}

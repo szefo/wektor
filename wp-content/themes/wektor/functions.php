@@ -167,3 +167,42 @@ function disable_emojis()
 }
 
 add_action('init', 'disable_emojis');
+
+// Disable W3TC footer comment for all users
+add_filter( 'w3tc_can_print_comment', function( $w3tc_setting ) { return false; }, 10, 1 );
+
+//Custom Theme Settings
+add_action('admin_menu', 'add_gcf_interface');
+
+function add_gcf_interface() {
+	add_options_page('Zmień dane kontaktowe', 'Zmień dane kontaktowe', '8', 'functions', 'editglobalcustomfields');
+}
+
+function editglobalcustomfields() {
+	?>
+	<div class='wrap'>
+		<h2>Zmień telefon lub email</h2>
+		<form method="post" action="options.php">
+			<?php wp_nonce_field('update-options') ?>
+
+			<p><strong>Adres:</strong><br />
+				<input type="text" name="address" size="45" value="<?php echo get_option('address'); ?>" /></p>
+
+			<p><strong>Email:</strong><br />
+				<input type="email" name="email" size="45" value="<?php echo get_option('email'); ?>" /></p>
+			
+			<p><strong>Facebook link:</strong><br />
+				<input type="text" name="face" size="45" value="<?php echo get_option('face'); ?>" /></p>
+
+			<p><strong>Telefon:</strong><br />
+				<input type="tel" name="phone" size="45" value="<?php echo get_option('phone'); ?>" /></p>
+
+			<p><input type="submit" name="Submit" value="Zaktualizuj dane" /></p>
+
+			<input type="hidden" name="action" value="update" />
+			<input type="hidden" name="page_options" value="address,email,face,phone" />
+
+		</form>
+	</div>
+	<?php
+}

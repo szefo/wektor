@@ -2,6 +2,7 @@
 	float: left;
 	width: 100%;
 	background-color: $color__top-header;
+
 	height: $height__top-header;
 
 
@@ -25,6 +26,8 @@
 
 	.right{
 		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 
 		img{
 			visibility: hidden;

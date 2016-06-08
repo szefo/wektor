@@ -39,7 +39,7 @@
                             </a>
                         <?php endif; ?>
                     </div>
-                    <div class="col-md-18 contact-data no-gutters">
+                    <div class="col-md-18 contact-data">
                         <p><?= get_option('address') ?></p>
                         <a href="mailtp:<?= get_option('email') ?>"><?= get_option('email') ?></a>
                         <a target="_blank" href="<?= get_option('face') ?>">

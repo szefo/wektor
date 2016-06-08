@@ -2853,7 +2853,7 @@ a:hover, a:active {
 .main-navigation ul ul a {
   width: 200px;
   line-height: 1.2;
-  padding: 3px 13px;
+  padding: 3px 12px;
 }
 @media (max-width: 1179px) {
   .main-navigation ul ul a {
@@ -2893,7 +2893,7 @@ a:hover, a:active {
   padding-left: 0;
 }
 .main-navigation #primary-menu > li > a {
-  padding: 14px 13px;
+  padding: 14px 12px;
 }
 .main-navigation #primary-menu > li > a:hover:after {
   transition: all 500ms ease;
@@ -3248,13 +3248,12 @@ object {
   font-size: 2.5rem;
   color: #0c2c61;
 }
-.top-header .right {
+.top-header .right > div {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-.top-header .right img {
-  visibility: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 #masthead {
@@ -3343,6 +3342,7 @@ object {
   transform-style: preserve-3d;
   height: 55px;
   padding-left: 18px;
+  padding-right: 15px;
   z-index: 1;
 }
 #masthead .phone p {
@@ -3368,4 +3368,33 @@ object {
   right: -1000%;
   bottom: 0;
   height: 55px;
+}
+
+#colophon {
+  float: left;
+  width: 100%;
+  height: 75px;
+  background-image: linear-gradient(to right, #1968ac, #1968ac 50%, #0c2c61 50%);
+}
+#colophon p {
+  color: #fff;
+  margin: 0;
+  line-height: 4.7;
+}
+#colophon p.right {
+  text-align: right;
+  font-weight: 300;
+}
+#colophon a {
+  color: #fff;
+  transition: all 500ms ease;
+  text-decoration: none;
+}
+#colophon a:visited, #colophon a:focus, #colophon a:active {
+  color: #fff;
+}
+#colophon a:hover {
+  text-decoration: underline;
+  color: #fff;
+  opacity: 0.7;
 }

@@ -11,16 +11,21 @@
 
 ?>
 
-	</div><!-- #content -->
+</div>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wektor' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'wektor' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'wektor' ), 'wektor', '<a href="http://www.brodnet.pl/" rel="designer">Brodnet</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="left">Wszelkie prawa zastrzeżone @ Wektor Consulting 2016</p>
+            </div>
+            <div class="col-md-12">
+                <p class="right">Projekt i reazlicja: <a target="_blank" href="http://penmark.pl/"><strong>Penmark.pl</strong></a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
 
 <?php wp_footer(); ?>
 

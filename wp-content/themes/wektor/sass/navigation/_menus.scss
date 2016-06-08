@@ -34,7 +34,7 @@
       a {
         width: 200px;
         line-height: 1.2;
-        padding: 3px 13px;
+        padding: 3px 12px;
 
         @include media-breakpoint-down(lg){
           padding: 3px 7px;
@@ -98,7 +98,7 @@
     }
 
     > a {
-      padding: 14px 13px;
+      padding: 14px 12px;
     }
 
     > a:hover:after {

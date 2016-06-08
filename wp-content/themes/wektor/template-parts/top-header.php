@@ -9,8 +9,10 @@
                 <h2><?= $title ?></h2>
                 <?php endif; ?>
             </div>
-            <div class="col-xl-14 col-lg-16 no-gutters right"
-                 style="background-image: url(<?= $image['url'] ?>);">
+            <div class="col-xl-14 col-lg-16 right">
+                <div style="background-image: url(<?= $image['url'] ?>);">
+
+                </div>
             </div>
         </div>
     </div>
